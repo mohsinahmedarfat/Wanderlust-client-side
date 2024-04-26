@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import { useForm } from "react-hook-form";
+import { FaGithub, FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../providers/AuthProvider";
 
 const Login = () => {
+  const { login } = useContext(AuthContext);
   const {
     register,
     handleSubmit,
@@ -11,6 +15,15 @@ const Login = () => {
   const onSubmit = (data) => {
     console.log(data);
     const { email, password } = data;
+
+    // login user
+    login(email, password)
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
   };
 
   return (
@@ -66,6 +79,25 @@ const Login = () => {
             </p>
           </div>
         </form>
+
+        <div className="flex items-center mb-5 mx-8 space-x-1">
+          <div className="flex-1 border border-green-400 h-px sm:w-16 dark:bg-gray-300"></div>
+          <p className="px-3  text-sm dark:text-gray-600">
+            Login with social accounts
+          </p>
+          <div className="flex-1 border border-green-400 h-px sm:w-16 dark:bg-gray-300"></div>
+        </div>
+
+        <div className=" space-y-3 mb-6 px-8">
+          <button className="btn bg-green-400 text-green-100 hover:bg-white hover:border hover:border-green-400 hover:text-green-400 w-full">
+            <FaGoogle />
+            Login with Google
+          </button>
+          <button className="btn bg-green-400 text-green-100 hover:bg-white hover:border hover:border-green-400 hover:text-green-400 w-full">
+            <FaGithub />
+            Login with Github
+          </button>
+        </div>
       </div>
     </div>
   );

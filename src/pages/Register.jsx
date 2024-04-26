@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../providers/AuthProvider";
 
 const Register = () => {
+  const { createUser } = useContext(AuthContext);
   const [error, setError] = useState("");
 
   const {
@@ -13,7 +15,7 @@ const Register = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    const { email, password, name, image } = data;
+    const { email, password } = data;
 
     if (password.length < 6) {
       setError("Password should be at least 6 characters");
@@ -26,6 +28,13 @@ const Register = () => {
       return;
     }
     setError("");
+
+    // create user with email and password
+    createUser(email, password)
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => console.log(error.message));
   };
   return (
     <div className="my-10 border border-red-400">
