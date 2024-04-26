@@ -1,6 +1,10 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 
 const Register = () => {
+  const [error, setError] = useState("");
+
   const {
     register,
     handleSubmit,
@@ -9,7 +13,19 @@ const Register = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    const { email, password } = data;
+    const { email, password, name, image } = data;
+
+    if (password.length < 6) {
+      setError("Password should be at least 6 characters");
+      return;
+    }
+    if (!/^(?=.*[a-z])(?=.*[A-Z]).+$/.test(password)) {
+      setError(
+        "Password must contains at least one uppercase and lowercase letter"
+      );
+      return;
+    }
+    setError("");
   };
   return (
     <div className="my-10 border border-red-400">
@@ -79,9 +95,16 @@ const Register = () => {
                 This field is required
               </small>
             )}
+            {error && <small className="text-red-500 mt-2">{error}</small>}
           </div>
           <div className="form-control mt-6">
             <button className="btn btn-primary">Register</button>
+            <p className="text-center mt-3">
+              Already have an account?{" "}
+              <Link className="text-blue-500 font-bold" to="/login">
+                Log in
+              </Link>
+            </p>
           </div>
         </form>
       </div>
