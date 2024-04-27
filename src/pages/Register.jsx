@@ -1,11 +1,13 @@
 import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
+import { toast } from "react-toastify";
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser, updateUserProfile, setReload } = useContext(AuthContext);
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const {
     register,
@@ -15,7 +17,7 @@ const Register = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    const { email, password } = data;
+    const { email, password, name, photo } = data;
 
     if (password.length < 6) {
       setError("Password should be at least 6 characters");
@@ -33,8 +35,24 @@ const Register = () => {
     createUser(email, password)
       .then((result) => {
         console.log(result.user);
+
+        // update user name and photo
+        updateUserProfile(name, photo).then(() => {
+          setReload(true);
+          // navigate to home
+          navigate("/");
+        });
+
+        if (result.user) {
+          toast.success("Register account successful");
+        }
       })
-      .catch((error) => console.log(error.message));
+      .catch((error) => {
+        console.log(error.message);
+        if (error) {
+          toast.error("Email already in use");
+        }
+      });
   };
   return (
     <div className="my-10 border border-red-400">

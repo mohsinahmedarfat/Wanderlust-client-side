@@ -1,11 +1,15 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { FaGithub, FaGoogle } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const { login } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+  console.log(location);
   const {
     register,
     handleSubmit,
@@ -20,6 +24,11 @@ const Login = () => {
     login(email, password)
       .then((result) => {
         console.log(result.user);
+        if (result.user) {
+          toast.success("Login successful");
+        }
+        // navigate after login
+        navigate(`${location.state ? location.state : "/"}`);
       })
       .catch((error) => {
         console.log(error.message);
