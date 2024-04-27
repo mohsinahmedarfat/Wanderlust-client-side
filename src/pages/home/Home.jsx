@@ -2,7 +2,7 @@ import Slider from "./Slider";
 
 const Home = () => {
   return (
-    <div>
+    <div className="space-y-10 my-10">
       <Slider></Slider>
     </div>
   );
