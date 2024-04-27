@@ -6,7 +6,7 @@ import { AuthContext } from "../providers/AuthProvider";
 import { toast } from "react-toastify";
 
 const Login = () => {
-  const { login } = useContext(AuthContext);
+  const { login, googleLogin, githubLogin } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   console.log(location);
@@ -33,6 +33,20 @@ const Login = () => {
       .catch((error) => {
         console.log(error.message);
       });
+  };
+
+  const handleGoogleLogin = () => {
+    googleLogin().then((result) => {
+      console.log(result.user);
+      navigate(`${location.state ? location.state : "/"}`);
+    });
+  };
+
+  const handleGithubLogin = () => {
+    githubLogin().then((result) => {
+      console.log(result.user);
+      navigate(`${location.state ? location.state : "/"}`);
+    });
   };
 
   return (
@@ -98,11 +112,17 @@ const Login = () => {
         </div>
 
         <div className=" space-y-3 mb-6 px-8">
-          <button className="btn bg-green-400 text-green-100 hover:bg-white hover:border hover:border-green-400 hover:text-green-400 w-full">
+          <button
+            onClick={handleGoogleLogin}
+            className="btn bg-green-400 text-green-100 hover:bg-white hover:border hover:border-green-400 hover:text-green-400 w-full"
+          >
             <FaGoogle />
             Login with Google
           </button>
-          <button className="btn bg-green-400 text-green-100 hover:bg-white hover:border hover:border-green-400 hover:text-green-400 w-full">
+          <button
+            onClick={handleGithubLogin}
+            className="btn bg-green-400 text-green-100 hover:bg-white hover:border hover:border-green-400 hover:text-green-400 w-full"
+          >
             <FaGithub />
             Login with Github
           </button>
