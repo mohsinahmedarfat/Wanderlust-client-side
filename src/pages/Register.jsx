@@ -55,9 +55,9 @@ const Register = () => {
       });
   };
   return (
-    <div className="my-10 border border-red-400">
+    <div className="my-10">
       <h1 className="text-3xl text-center mb-5 font-bold">Register Now!</h1>
-      <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 mx-auto border border-red-400">
+      <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 mx-auto">
         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
           <div className="form-control">
             <label className="label">

@@ -13,7 +13,7 @@ const Spot = ({ touristSpot }) => {
   return (
     <div className="card bg-base-100 shadow-xl">
       <figure>
-        <img src={image} alt="tourist spot" />
+        <img className="h-[266px]" src={image} alt="tourist spot" />
       </figure>
       <div className="card-body">
         <h2 className="card-title text-2xl">{tourists_spot_name}</h2>

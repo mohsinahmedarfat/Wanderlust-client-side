@@ -1,9 +1,6 @@
-import { useContext } from "react";
 import { ScrollRestoration, useLoaderData } from "react-router-dom";
-import { AuthContext } from "../../providers/AuthProvider";
 
 const SpotDetails = () => {
-  const { user } = useContext(AuthContext);
   const spot = useLoaderData();
   const {
     image,
@@ -60,11 +57,6 @@ const SpotDetails = () => {
         {/*  */}
         <div className="flex flex-col justify-center p-6 shadow-md rounded-xl sm:px-12">
           <h3 className="mx-auto mb-3 text-xl font-semibold">Added by</h3>
-          <img
-            src={user.photoURL}
-            alt=""
-            className="w-32 h-32 mx-auto rounded-full aspect-square"
-          />
           <div className="space-y-4 text-center divide-y divide-gray-700">
             <div className="my-2 space-y-1">
               <h2 className="text-xl font-semibold sm:text-2xl">{name}</h2>

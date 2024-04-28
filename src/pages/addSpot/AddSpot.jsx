@@ -156,8 +156,8 @@ const AddSpot = () => {
               </label>
               <input
                 type="text"
-                placeholder="$"
                 className="input input-bordered"
+                defaultValue="$"
                 {...register("average_cost", { required: true })}
               />
               {errors.average_cost && (

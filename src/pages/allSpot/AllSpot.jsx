@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { ScrollRestoration, useLoaderData } from "react-router-dom";
 import Spot from "./Spot";
 
 const AllSpot = () => {
@@ -6,7 +6,8 @@ const AllSpot = () => {
   console.log(touristSpots);
   return (
     <div className="my-10">
-      <h1 className="text-3xl text-center mb-5 font-bold">
+      <ScrollRestoration></ScrollRestoration>
+      <h1 className="text-3xl text-center mb-10 font-bold">
         See All Tourist Spots
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
