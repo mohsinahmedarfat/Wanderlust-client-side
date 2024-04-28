@@ -1,75 +1,56 @@
 import { useForm } from "react-hook-form";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
-const AddSpot = () => {
+const UpdateSpot = () => {
+  const spot = useLoaderData();
+  const navigate = useNavigate();
+  console.log(spot);
+  const {
+    image,
+    tourists_spot_name,
+    country_name,
+    location,
+    short_description,
+    average_cost,
+    total_visitors_per_year,
+    travel_time,
+    seasonality,
+  } = spot;
+
   const {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
   } = useForm();
 
-  const onSubmit = (touristSpot) => {
-    console.log(touristSpot);
+  const onSubmit = (updateSpot) => {
+    console.log(updateSpot);
 
-    fetch("http://localhost:5000/touristSpots", {
-      method: "POST",
+    fetch(`http://localhost:5000/touristSpots/${spot._id}`, {
+      method: "PUT",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(touristSpot),
+      body: JSON.stringify(updateSpot),
     })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        if (data.insertedId) {
-          toast.success("Tourist spot added successfully");
+        if (data.modifiedCount > 0) {
+          toast.success("Spot updated successfully");
+          navigate("/myList");
         }
       });
-    reset();
   };
-
   return (
     <div className="my-10">
       <h1 className="text-3xl text-center mb-5 font-bold">
-        Add a Tourist Spot
+        Update Tourist Spot
       </h1>
       <div className="card shrink-0 w-full  shadow-2xl bg-base-100 mx-auto">
         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="form-control w-full">
-              <label className="label">
-                <span className="label-text">Name</span>
-              </label>
-              <input
-                type="text"
-                placeholder="Name"
-                className="input input-bordered"
-                {...register("name", { required: true })}
-              />
-              {errors.name && (
-                <small className="text-red-500 mt-2">
-                  This field is required
-                </small>
-              )}
-            </div>
-            <div className="form-control w-full">
-              <label className="label">
-                <span className="label-text">Email</span>
-              </label>
-              <input
-                type="email"
-                placeholder="Email"
-                className="input input-bordered"
-                {...register("email", { required: true })}
-              />
-              {errors.email && (
-                <small className="text-red-500 mt-2">
-                  This field is required
-                </small>
-              )}
-            </div>
-
             <div className="form-control w-full">
               <label className="label">
                 <span className="label-text">Image</span>
@@ -77,6 +58,7 @@ const AddSpot = () => {
               <input
                 type="text"
                 placeholder="Image URL"
+                defaultValue={image}
                 className="input input-bordered"
                 {...register("image", { required: true })}
               />
@@ -94,6 +76,7 @@ const AddSpot = () => {
                 type="text"
                 placeholder="Tourist spot name"
                 className="input input-bordered"
+                defaultValue={tourists_spot_name}
                 {...register("tourists_spot_name", { required: true })}
               />
               {errors.tourists_spot_name && (
@@ -110,6 +93,7 @@ const AddSpot = () => {
                 type="text"
                 placeholder="Country name"
                 className="input input-bordered"
+                defaultValue={country_name}
                 {...register("country_name", { required: true })}
               />
               {errors.country_name && (
@@ -126,6 +110,7 @@ const AddSpot = () => {
                 type="text"
                 placeholder="Location"
                 className="input input-bordered"
+                defaultValue={location}
                 {...register("location", { required: true })}
               />
               {errors.location && (
@@ -142,6 +127,7 @@ const AddSpot = () => {
                 type="text"
                 placeholder="Description"
                 className="input input-bordered"
+                defaultValue={short_description}
                 {...register("short_description", { required: true })}
               />
               {errors.short_description && (
@@ -158,6 +144,7 @@ const AddSpot = () => {
                 type="text"
                 placeholder="$"
                 className="input input-bordered"
+                defaultValue={average_cost}
                 {...register("average_cost", { required: true })}
               />
               {errors.average_cost && (
@@ -174,6 +161,7 @@ const AddSpot = () => {
                 type="text"
                 placeholder="ex. summer / winter"
                 className="input input-bordered"
+                defaultValue={seasonality}
                 {...register("seasonality", { required: true })}
               />
               {errors.seasonality && (
@@ -190,6 +178,7 @@ const AddSpot = () => {
                 type="text"
                 placeholder="Days"
                 className="input input-bordered"
+                defaultValue={travel_time}
                 {...register("travel_time", { required: true })}
               />
               {errors.travel_time && (
@@ -206,6 +195,7 @@ const AddSpot = () => {
                 type="text"
                 placeholder="Numbers"
                 className="input input-bordered"
+                defaultValue={total_visitors_per_year}
                 {...register("total_visitors_per_year", { required: true })}
               />
               {errors.total_visitors_per_year && (
@@ -216,7 +206,7 @@ const AddSpot = () => {
             </div>
           </div>
           <div className="form-control mt-6">
-            <button className="btn btn-primary">Add</button>
+            <button className="btn btn-primary">Update</button>
           </div>
         </form>
       </div>
@@ -224,4 +214,4 @@ const AddSpot = () => {
   );
 };
 
-export default AddSpot;
+export default UpdateSpot;

@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 
 const MyList = () => {
   const { user } = useContext(AuthContext);
@@ -54,7 +55,9 @@ const MyList = () => {
                 <td>{spot.average_cost}</td>
                 <td>{spot.seasonality}</td>
                 <td>
-                  <button className="btn">Update</button>
+                  <Link to={`/updateSpot/${spot._id}`}>
+                    <button className="btn">Update</button>
+                  </Link>
                 </td>
                 <td>
                   <button
