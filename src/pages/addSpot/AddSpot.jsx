@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 
 const AddSpot = () => {
   const {
@@ -7,8 +8,23 @@ const AddSpot = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = (touristSpot) => {
+    console.log(touristSpot);
+
+    fetch("http://localhost:5000/touristSpots", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(touristSpot),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.insertedId) {
+          toast.success("Tourist spot added successfully");
+        }
+      });
   };
 
   return (
