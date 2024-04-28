@@ -1,10 +1,11 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import { toast } from "react-toastify";
 
 const MyList = () => {
   const { user } = useContext(AuthContext);
   const [spots, setSpots] = useState([]);
-  console.log(spots);
+  const [reload, setReload] = useState(false);
 
   useEffect(() => {
     fetch(`http://localhost:5000/myList/${user.email}`)
@@ -12,7 +13,22 @@ const MyList = () => {
       .then((data) => {
         setSpots(data);
       });
-  }, [user]);
+  }, [user, reload]);
+
+  const handleDelete = (id) => {
+    fetch(`http://localhost:5000/myList/${id}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.deletedCount > 0) {
+          toast.success("deleted succesfully");
+          //remove from UI after delete
+          setReload(!reload);
+        }
+      });
+  };
 
   return (
     <div className="my-10">
@@ -41,7 +57,12 @@ const MyList = () => {
                   <button className="btn">Update</button>
                 </td>
                 <td>
-                  <button className="btn">Delete</button>
+                  <button
+                    onClick={() => handleDelete(spot._id)}
+                    className="btn"
+                  >
+                    Delete
+                  </button>
                 </td>
               </tr>
             ))}
