@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import { Tooltip } from "react-tooltip";
 
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
@@ -75,7 +76,16 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
       <div className="navbar-end">
-        <label className="swap swap-rotate mr-2">
+        <Tooltip
+          id="my-tooltip"
+          style={{ backgroundColor: "white", color: "green" }}
+        />
+        <label
+          data-tooltip-id="my-tooltip"
+          data-tooltip-content="Change Theme"
+          data-tooltip-place="left"
+          className="swap swap-rotate mr-2"
+        >
           {/* this hidden checkbox controls the state */}
           <input
             onChange={handleToggle}
