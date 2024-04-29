@@ -8,7 +8,7 @@ const ErrorPage = () => {
         <h1 className="text-4xl">You have lost</h1>
         <div>
           <Link to="/">
-            <button className="btn bg-cyan-400 text-cyan-100 hover:bg-white hover:border hover:border-cyan-400 hover:text-cyan-400">
+            <button className="btn bg-green-400 text-green-100 hover:bg-white hover:border hover:border-green-400 hover:text-green-400">
               Back to Home
             </button>
           </Link>

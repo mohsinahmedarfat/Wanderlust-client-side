@@ -206,7 +206,9 @@ const UpdateSpot = () => {
             </div>
           </div>
           <div className="form-control mt-6">
-            <button className="btn btn-primary">Update</button>
+            <button className="btn bg-green-400 text-green-100 hover:bg-white hover:border hover:border-green-400 hover:text-green-400">
+              Update
+            </button>
           </div>
         </form>
       </div>

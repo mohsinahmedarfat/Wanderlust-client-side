@@ -32,7 +32,9 @@ const Spot = ({ touristSpot }) => {
         </p>
         <div className="mt-3">
           <Link to={`/spot/${_id}`}>
-            <button className="btn btn-primary w-full">View Details</button>
+            <button className="btn w-full bg-green-400 text-green-100 hover:bg-white hover:border hover:border-green-400 hover:text-green-400">
+              View Details
+            </button>
           </Link>
         </div>
       </div>

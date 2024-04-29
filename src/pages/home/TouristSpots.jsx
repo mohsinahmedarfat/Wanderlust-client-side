@@ -29,7 +29,7 @@ const TouristSpots = () => {
       </div>
       <div className="flex justify-center">
         <Link to="/allSpot">
-          <button className="btn mt-6 bg-cyan-400 text-cyan-100 hover:bg-white hover:border hover:border-cyan-400 hover:text-cyan-400 font-bold">
+          <button className="btn mt-6 bg-green-400 text-green-100 hover:bg-transparent hover:border hover:border-green-400 hover:text-green-400 font-bold">
             View All
           </button>
         </Link>

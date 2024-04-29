@@ -56,13 +56,15 @@ const MyList = () => {
                 <td>{spot.seasonality}</td>
                 <td>
                   <Link to={`/updateSpot/${spot._id}`}>
-                    <button className="btn">Update</button>
+                    <button className="btn bg-green-400 text-green-100 hover:bg-white hover:border hover:border-green-400 hover:text-green-400">
+                      Update
+                    </button>
                   </Link>
                 </td>
                 <td>
                   <button
                     onClick={() => handleDelete(spot._id)}
-                    className="btn"
+                    className="btn bg-green-400 text-green-100 hover:bg-white hover:border hover:border-green-400 hover:text-green-400"
                   >
                     Delete
                   </button>
