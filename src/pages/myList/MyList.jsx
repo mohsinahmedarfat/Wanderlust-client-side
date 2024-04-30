@@ -9,7 +9,7 @@ const MyList = () => {
   const [reload, setReload] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myList/${user.email}`)
+    fetch(`https://b9a10-wanderlust-server.vercel.app/myList/${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         setSpots(data);
@@ -17,7 +17,7 @@ const MyList = () => {
   }, [user, reload]);
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/myList/${id}`, {
+    fetch(`https://b9a10-wanderlust-server.vercel.app/myList/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
@@ -56,7 +56,7 @@ const MyList = () => {
                 <td>{spot.seasonality}</td>
                 <td>
                   <Link to={`/updateSpot/${spot._id}`}>
-                    <button className="btn bg-green-400 text-green-100 hover:bg-white hover:border hover:border-green-400 hover:text-green-400">
+                    <button className="btn bg-green-400 text-green-100 hover:bg-transparent hover:border hover:border-green-400 hover:text-green-400">
                       Update
                     </button>
                   </Link>
@@ -64,7 +64,7 @@ const MyList = () => {
                 <td>
                   <button
                     onClick={() => handleDelete(spot._id)}
-                    className="btn bg-green-400 text-green-100 hover:bg-white hover:border hover:border-green-400 hover:text-green-400"
+                    className="btn bg-green-400 text-green-100 hover:bg-transparent hover:border hover:border-green-400 hover:text-green-400"
                   >
                     Delete
                   </button>

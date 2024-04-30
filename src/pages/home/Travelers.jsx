@@ -28,6 +28,7 @@ const Travelers = () => {
           <h3 className="font-bold text-xl">Jhon Smith</h3>
           <p>London, England</p>
         </div>
+        <hr className="md:hidden" />
         <div className="bg-gray-200 w-[1px]"></div>
         {/* 2 */}
         <div className="p-5 flex flex-col items-center group">
@@ -44,6 +45,7 @@ const Travelers = () => {
           <h3 className="font-bold text-xl">Neetu Shae</h3>
           <p>Langkawi, Malaysia</p>
         </div>
+        <hr className="md:hidden" />
         <div className="bg-gray-200 w-[1px]"></div>
         {/* 3 */}
         <div className="p-5 flex flex-col items-center group">

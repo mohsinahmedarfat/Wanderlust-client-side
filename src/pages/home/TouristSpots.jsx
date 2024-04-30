@@ -6,7 +6,7 @@ const TouristSpots = () => {
   const [touristSpots, setTouristSpots] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/touristSpots")
+    fetch("https://b9a10-wanderlust-server.vercel.app/touristSpots")
       .then((res) => res.json())
       .then((data) => setTouristSpots(data));
   }, []);
@@ -14,7 +14,7 @@ const TouristSpots = () => {
   return (
     <div className="my-10 space-y-6">
       <div className="mb-10">
-        <h2 className="text-4xl font-bold text-center ">Wanderlust Wonders</h2>
+        <h2 className="text-4xl font-bold text-center">Wanderlust Wonders</h2>
         <p className="text-center max-w-xl mx-auto mt-5">
           Uncover the beauty of our destination top tourist spots with
           Wanderlust Wonders. Let your curiosity guide you as you explore these

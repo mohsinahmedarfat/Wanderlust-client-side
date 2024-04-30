@@ -3,7 +3,8 @@ import Booking from "./Booking";
 import Slider from "./Slider";
 import TouristSpots from "./TouristSpots";
 import Travelers from "./Travelers";
-import { Bounce, Fade, Slide } from "react-awesome-reveal";
+import { Fade, Slide } from "react-awesome-reveal";
+import Countries from "./countries/Countries";
 
 const Home = () => {
   return (
@@ -16,12 +17,12 @@ const Home = () => {
       <Slide>
         <Booking></Booking>
       </Slide>
+      <Fade>
+        <Countries></Countries>
+      </Fade>
       <Slide direction="right">
         <Travelers></Travelers>
       </Slide>
-      <Bounce>
-        <Travelers></Travelers>
-      </Bounce>
     </div>
   );
 };

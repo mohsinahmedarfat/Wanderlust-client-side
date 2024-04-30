@@ -4,31 +4,33 @@ const Footer = () => {
   return (
     <div className="bg-green-100">
       <footer className="footer py-10 px-24  text-base-content">
-        <aside>
+        <aside className="flex flex-col justify-center items-center mx-auto md:grid">
           <Link to="/">
             <h1 className="text-xl font-bold">
               Wander<span className="text-green-400">lust</span>
             </h1>
           </Link>
-          <p>
+          <p className="text-center md:text-left">
             Explore Beyond, <br /> Wanderlust Guides Your Journey!
           </p>
         </aside>
-        <nav>
-          <h6 className="footer-title">Services</h6>
-          <a className="link link-hover">Branding</a>
-          <a className="link link-hover">Design</a>
-          <a className="link link-hover">Marketing</a>
-          <a className="link link-hover">Advertisement</a>
-        </nav>
-        <nav>
-          <h6 className="footer-title">Company</h6>
-          <a className="link link-hover">About us</a>
-          <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Jobs</a>
-          <a className="link link-hover">Press kit</a>
-        </nav>
-        <nav>
+        <div className="flex gap-20 md:gap-6 lg:gap-20">
+          <nav className="flex flex-col space-y-3">
+            <h6 className="footer-title">Services</h6>
+            <a className="link link-hover">Branding</a>
+            <a className="link link-hover">Design</a>
+            <a className="link link-hover">Marketing</a>
+            <a className="link link-hover">Advertisement</a>
+          </nav>
+          <nav className="flex flex-col space-y-3">
+            <h6 className="footer-title">Company</h6>
+            <a className="link link-hover">About us</a>
+            <a className="link link-hover">Contact</a>
+            <a className="link link-hover">Jobs</a>
+            <a className="link link-hover">Press kit</a>
+          </nav>
+        </div>
+        <nav className="flex flex-col justify-center items-center mx-auto">
           <h6 className="footer-title">Social</h6>
           <div className="grid grid-flow-col gap-4">
             <a>

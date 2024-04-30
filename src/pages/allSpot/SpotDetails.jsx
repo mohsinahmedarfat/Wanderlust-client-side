@@ -20,7 +20,7 @@ const SpotDetails = () => {
       <ScrollRestoration />
       <p className="text-slate-400">{country_name}</p>
       <h1 className="text-5xl font-bold">{tourists_spot_name}</h1>
-      <div className="flex gap-4">
+      <div className="flex flex-wrap gap-4">
         <div>
           <p className="text-slate-400">Average cost</p>
           <h4 className="text-2xl font-bold text-green-400">{average_cost}</h4>
@@ -48,7 +48,11 @@ const SpotDetails = () => {
           <p className="font-semibold">{location}</p>
         </div>
       </div>
-      <img className="h-[800px] w-full" src={image} alt="" />
+      <img
+        className="h-64 md:h-[700px] lg:h-[800px] w-full"
+        src={image}
+        alt=""
+      />
       <div className="space-y-3">
         <h3 className="text-3xl font-semibold">Short description</h3>
         <p>{short_description}</p>

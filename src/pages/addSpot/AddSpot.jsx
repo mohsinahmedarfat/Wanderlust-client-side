@@ -12,7 +12,7 @@ const AddSpot = () => {
   const onSubmit = (touristSpot) => {
     console.log(touristSpot);
 
-    fetch("http://localhost:5000/touristSpots", {
+    fetch("https://b9a10-wanderlust-server.vercel.app/touristSpots", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -216,7 +216,7 @@ const AddSpot = () => {
             </div>
           </div>
           <div className="form-control mt-6">
-            <button className="btn bg-green-400 text-green-100 hover:bg-white hover:border hover:border-green-400 hover:text-green-400">
+            <button className="btn bg-green-400 text-green-100 hover:bg-transparent hover:border hover:border-green-400 hover:text-green-400">
               Add
             </button>
           </div>

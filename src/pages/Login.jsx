@@ -93,7 +93,9 @@ const Login = () => {
             </label>
           </div>
           <div className="form-control mt-6">
-            <button className="btn btn-primary">Login</button>
+            <button className="btn bg-green-400 text-green-100 hover:bg-transparent hover:border hover:border-green-400 hover:text-green-400 w-full">
+              Login
+            </button>
             <p className="text-center mt-3">
               Do not have an account?{" "}
               <Link className="text-blue-500 font-bold" to="/register">
@@ -114,14 +116,14 @@ const Login = () => {
         <div className=" space-y-3 mb-6 px-8">
           <button
             onClick={handleGoogleLogin}
-            className="btn bg-green-400 text-green-100 hover:bg-white hover:border hover:border-green-400 hover:text-green-400 w-full"
+            className="btn bg-green-400 text-green-100 hover:bg-transparent hover:border hover:border-green-400 hover:text-green-400 w-full"
           >
             <FaGoogle />
             Login with Google
           </button>
           <button
             onClick={handleGithubLogin}
-            className="btn bg-green-400 text-green-100 hover:bg-white hover:border hover:border-green-400 hover:text-green-400 w-full"
+            className="btn bg-green-400 text-green-100 hover:bg-transparent hover:border hover:border-green-400 hover:text-green-400 w-full"
           >
             <FaGithub />
             Login with Github

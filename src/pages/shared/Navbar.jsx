@@ -6,7 +6,6 @@ import { Tooltip } from "react-tooltip";
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
   const [theme, setTheme] = useState("light");
-  console.log(theme);
 
   useEffect(() => {
     localStorage.setItem("theme", theme);
@@ -61,7 +60,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-10 p-2 shadow bg-base-100 rounded-box w-52"
           >
             {navLinks}
           </ul>
@@ -125,7 +124,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+              className="dropdown-content z-10 menu p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
                 <p>{user.displayName}</p>
@@ -138,12 +137,12 @@ const Navbar = () => {
         ) : (
           <div className="space-x-3">
             <Link to="/login">
-              <button className="btn bg-green-400 text-green-100 hover:bg-white hover:border hover:border-green-400 hover:text-green-400">
+              <button className="btn bg-green-400 text-green-100 hover:bg-transparent hover:border hover:border-green-400 hover:text-green-400">
                 Login
               </button>
             </Link>
             <Link to="/register">
-              <button className="btn bg-green-400 text-green-100 hover:bg-white hover:border hover:border-green-400 hover:text-green-400">
+              <button className="btn bg-green-400 text-green-100 hover:bg-transparent hover:border hover:border-green-400 hover:text-green-400">
                 Register
               </button>
             </Link>
