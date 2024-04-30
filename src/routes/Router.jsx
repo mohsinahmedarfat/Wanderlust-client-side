@@ -43,6 +43,10 @@ const router = createBrowserRouter([
       {
         path: "/countries/:country_name",
         element: <CountrySpots></CountrySpots>,
+        loader: ({ params }) =>
+          fetch(
+            `https://b9a10-wanderlust-server.vercel.app/countries/${params.country_name}`
+          ),
       },
       {
         path: "/addSpot",
