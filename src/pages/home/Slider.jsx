@@ -42,11 +42,14 @@ const Slider = () => {
               alt=""
             />
             <div className="text-center space-y-6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-              <h1 className="text-5xl font-bold text-white">Dream Realty</h1>
+              <h1 className="text-5xl font-bold text-white">
+                Explore the Wonders of the World with Us!
+              </h1>
               <p className="text-white">
-                Embark on your journey to finding the perfect property with
-                Dream Realty. Explore our listings and let us help you turn your
-                real estate dreams into reality.
+                Embark on an unforgettable journey to discover breathtaking
+                landscapes, vibrant cultures, and hidden gems across the globe.
+                Let us be your guide to extraordinary adventures and
+                unforgettable memories. Start your adventure today!
               </p>
             </div>
           </div>
@@ -59,11 +62,15 @@ const Slider = () => {
               alt=""
             />
             <div className="text-center space-y-6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-              <h1 className="text-5xl font-bold text-white">Elite Estates</h1>
+              <h1 className="text-5xl font-bold text-white">
+                Discover Your Next Adventure
+              </h1>
               <p className="text-white">
-                Experience the epitome of luxury living with Elite Estates.
-                Explore our exclusive properties and elevate your lifestyle to
-                new heights.
+                Escape the ordinary and dive into a world of exploration and
+                wonder. From majestic mountains to pristine beaches, let your
+                wanderlust lead the way. Whether you seek thrill or tranquility,
+                we have got the perfect destination waiting just for you. Let
+                the adventure begin!
               </p>
             </div>
           </div>
@@ -77,12 +84,14 @@ const Slider = () => {
             />
             <div className="text-center space-y-6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
               <h1 className="text-5xl font-bold text-white">
-                Prime Properties
+                Unlock the World's Wonders
               </h1>
               <p className="text-white">
-                Discover unparalleled opportunities in real estate with Prime
-                Properties. Find your ideal home or investment and embark on
-                your path to success.
+                Open the door to a world of enchantment and discovery. Immerse
+                yourself in diverse cultures, stunning landscapes, and
+                unforgettable experiences. With every journey, create memories
+                that will last a lifetime. Let's unlock the wonders of the world
+                together!
               </p>
             </div>
           </div>
@@ -95,11 +104,15 @@ const Slider = () => {
               alt=""
             />
             <div className="text-center space-y-6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-              <h1 className="text-5xl font-bold text-white">Home Haven</h1>
+              <h1 className="text-5xl font-bold text-white">
+                Journey Beyond Boundaries
+              </h1>
               <p className="text-white">
-                Find your sanctuary with Home Haven, where every property is a
-                perfect match for your lifestyle and aspirations. Begin your
-                journey to finding your dream home today.
+                Break free from the ordinary and step into a realm of endless
+                possibilities. Explore distant lands, immerse yourself in rich
+                cultures, and create memories that transcend borders. Join us as
+                we venture beyond boundaries and discover the beauty of our
+                world, one destination at a time.
               </p>
             </div>
           </div>
