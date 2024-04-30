@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logo from "../../assets/wander.png";
 
 const Footer = () => {
   return (
@@ -6,9 +7,12 @@ const Footer = () => {
       <footer className="footer py-10 px-24  text-base-content">
         <aside className="flex flex-col justify-center items-center mx-auto md:grid">
           <Link to="/">
-            <h1 className="text-xl font-bold">
-              Wander<span className="text-green-400">lust</span>
-            </h1>
+            <div>
+              <img className="w-20 h-20 mx-auto" src={logo} alt="" />
+              <h1 className="text-xl font-bold">
+                Wander<span className="text-green-400">lust</span>
+              </h1>
+            </div>
           </Link>
           <p className="text-center md:text-left">
             Explore Beyond, <br /> Wanderlust Guides Your Journey!

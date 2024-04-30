@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { Tooltip } from "react-tooltip";
+import logo from "../../assets/wander.png";
 
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
@@ -24,16 +25,52 @@ const Navbar = () => {
   const navLinks = (
     <>
       <li>
-        <NavLink to="/">Home</NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "bg-white border border-green-400 text-green-400 py-2 px-4 rounded-lg"
+              : "hover:bg-white hover:text-green-500 py-2 px-4 border border-transparent rounded-lg"
+          }
+          to="/"
+        >
+          Home
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/allSpot">All Tourists Spot</NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "bg-white border border-green-400 text-green-400 py-2 px-4 rounded-lg"
+              : "hover:bg-white hover:text-green-500 py-2 px-4 border border-transparent rounded-lg"
+          }
+          to="/allSpot"
+        >
+          All Tourists Spot
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/addSpot">Add Tourists Spot</NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "bg-white border border-green-400 text-green-400 py-2 px-4 rounded-lg"
+              : "hover:bg-white hover:text-green-500 py-2 px-4 border border-transparent rounded-lg"
+          }
+          to="/addSpot"
+        >
+          Add Tourists Spot
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/myList">My List</NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "bg-white border border-green-400 text-green-400 py-2 px-4 rounded-lg"
+              : "hover:bg-white hover:text-green-500 py-2 px-4 border border-transparent rounded-lg"
+          }
+          to="/myList"
+        >
+          My List
+        </NavLink>
       </li>
     </>
   );
@@ -60,19 +97,22 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-10 p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu-sm dropdown-content mt-3 z-10 p-2 py-4 space-y-4 shadow bg-base-100 rounded-box w-52"
           >
             {navLinks}
           </ul>
         </div>
         <Link to="/">
-          <h1 className="text-xl font-bold">
-            Wander<span className="text-green-400">lust</span>
-          </h1>
+          <div className="flex justify-between items-center">
+            <img className="w-20 h-20" src={logo} alt="" />
+            <h1 className="text-2xl font-bold">
+              Wander<span className="text-green-400">lust</span>
+            </h1>
+          </div>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{navLinks}</ul>
+        <ul className="menu-horizontal space-x-3">{navLinks}</ul>
       </div>
       <div className="navbar-end">
         <Tooltip

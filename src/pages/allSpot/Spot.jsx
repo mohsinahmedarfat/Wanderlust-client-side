@@ -12,13 +12,11 @@ const Spot = ({ touristSpot }) => {
   } = touristSpot;
   return (
     <div className="card bg-base-100 shadow-xl">
-      <figure>
-        <img
-          className="h-[266px] lg:h-56 xl:h-[266px]"
-          src={image}
-          alt="tourist spot"
-        />
-      </figure>
+      <img
+        className="h-72 lg:h-56 xl:h-[266px] rounded-t-2xl"
+        src={image}
+        alt="tourist spot"
+      />
       <div className="card-body">
         <h2 className="card-title text-2xl">{tourists_spot_name}</h2>
         <p>

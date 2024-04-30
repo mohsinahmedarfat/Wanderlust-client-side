@@ -11,7 +11,7 @@ const Country = ({ country }) => {
       <Link to={`/countries/${country_name}`}>
         <figure>
           <img
-            className="h-[266px] rounded-t-lg"
+            className="h-[266px] rounded-t-2xl"
             src={image}
             alt="tourist spot"
           />

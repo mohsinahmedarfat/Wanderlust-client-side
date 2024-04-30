@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import slider1 from "../../assets/slider-1.jpg";
 import slider2 from "../../assets/slider-2.jpg";
 import slider3 from "../../assets/slider-3.jpg";
@@ -37,12 +38,12 @@ const Slider = () => {
         <SwiperSlide>
           <div className="relative bg-black rounded-2xl">
             <img
-              className="w-full h-96 md:h-[400px] lg:h-[500px] rounded-2xl opacity-60"
+              className="w-full h-[500px] md:h-[400px] lg:h-[500px] rounded-2xl opacity-60"
               src={slider1}
               alt=""
             />
             <div className="text-center space-y-6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-              <h1 className="text-5xl font-bold text-white">
+              <h1 className="text-3xl md:text-5xl font-bold text-white">
                 Explore the Wonders of the World with Us!
               </h1>
               <p className="text-white">
@@ -57,12 +58,12 @@ const Slider = () => {
         <SwiperSlide>
           <div className="relative bg-black rounded-2xl">
             <img
-              className="w-full h-96 md:h-[400px] lg:h-[500px] rounded-2xl opacity-60"
+              className="w-full h-[500px] md:h-[400px] lg:h-[500px] rounded-2xl opacity-60"
               src={slider2}
               alt=""
             />
             <div className="text-center space-y-6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-              <h1 className="text-5xl font-bold text-white">
+              <h1 className="text-3xl md:text-5xl font-bold text-white">
                 Discover Your Next Adventure
               </h1>
               <p className="text-white">
@@ -78,12 +79,12 @@ const Slider = () => {
         <SwiperSlide>
           <div className="relative bg-black rounded-2xl">
             <img
-              className="w-full h-96 md:h-[400px] lg:h-[500px] rounded-2xl opacity-60"
+              className="w-full h-[500px] md:h-[400px] lg:h-[500px] rounded-2xl opacity-60"
               src={slider3}
               alt=""
             />
             <div className="text-center space-y-6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-              <h1 className="text-5xl font-bold text-white">
+              <h1 className="text-3xl md:text-5xl font-bold text-white">
                 Unlock the World's Wonders
               </h1>
               <p className="text-white">
@@ -99,12 +100,12 @@ const Slider = () => {
         <SwiperSlide>
           <div className="relative bg-black rounded-2xl">
             <img
-              className="w-full h-96 md:h-[400px] lg:h-[500px] rounded-2xl opacity-60"
+              className="w-full h-[500px] md:h-[400px] lg:h-[500px] rounded-2xl opacity-60"
               src={slider4}
               alt=""
             />
             <div className="text-center space-y-6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-              <h1 className="text-5xl font-bold text-white">
+              <h1 className="text-3xl md:text-5xl font-bold text-white">
                 Journey Beyond Boundaries
               </h1>
               <p className="text-white">
