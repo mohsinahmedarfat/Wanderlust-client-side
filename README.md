@@ -1,6 +1,6 @@
 # [WANDERLUST](https://wanderlust-3daf6.web.app/)
 
-Welcome to the repository for my awesome website! You can visit the live site by clicking the website title name.
+Wanderlust is a travel planning tool that helps users create and manage their dream travel itineraries.
 
 ### Features and Characteristics
 
@@ -13,10 +13,24 @@ Welcome to the repository for my awesome website! You can visit the live site by
 - If you're logged in, you can see tourist spot's full details.
 - This tourism is Southeast Asia based.
 
+### Technologies used :
+- react
+- react router dom
+- tailwind css
+- firebase
+- node.js
+- express.js
+- mongoDB
+
 ### npm packages used :
 - [react toastify](https://fkhadra.github.io/react-toastify/installation/) used for toast.
 - [sweetalert2](https://sweetalert2.github.io/) used for popup alert.
-
-### npm packages used for challenges task:
 - [react-awesome-reveal](https://www.npmjs.com/package/react-awesome-reveal) used for animation.
 - [React Tooltip](https://react-tooltip.com/) used for tooltip.
+
+### If you clone this project you've to do some steps:
+- Copy the repository URL
+- Open a terminal window
+- Navigate to your desired location
+- Clone the repository: git clone <URL>
+- Install the npm packages: npm install
