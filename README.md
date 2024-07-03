@@ -34,3 +34,5 @@ Wanderlust is a travel planning tool that helps users create and manage their dr
 - Navigate to your desired location
 - Clone the repository: git clone <URL>
 - Install the npm packages: npm install
+
+### Server side repo code is [here](https://github.com/mohsinahmedarfat/Wanderlust-server-side).
