@@ -38,15 +38,15 @@ const Slider = () => {
         <SwiperSlide>
           <div className="relative bg-black rounded-2xl">
             <img
-              className="w-full h-[500px] md:h-[400px] lg:h-[500px] rounded-2xl opacity-60"
+              className="w-full h-[380px] md:h-[400px] lg:h-[500px] rounded-2xl opacity-60"
               src={slider1}
               alt=""
             />
             <div className="text-center space-y-6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-              <h1 className="text-3xl md:text-5xl font-bold text-white">
+              <h1 className="text-2xl md:text-5xl font-bold text-white">
                 Explore the Wonders of the World with Us!
               </h1>
-              <p className="text-white">
+              <p className="text-white text-xs md:text-base">
                 Embark on an unforgettable journey to discover breathtaking
                 landscapes, vibrant cultures, and hidden gems across the globe.
                 Let us be your guide to extraordinary adventures and
@@ -58,15 +58,15 @@ const Slider = () => {
         <SwiperSlide>
           <div className="relative bg-black rounded-2xl">
             <img
-              className="w-full h-[500px] md:h-[400px] lg:h-[500px] rounded-2xl opacity-60"
+              className="w-full h-[380px] md:h-[400px] lg:h-[500px] rounded-2xl opacity-60"
               src={slider2}
               alt=""
             />
             <div className="text-center space-y-6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-              <h1 className="text-3xl md:text-5xl font-bold text-white">
+              <h1 className="text-2xl md:text-5xl font-bold text-white">
                 Discover Your Next Adventure
               </h1>
-              <p className="text-white">
+              <p className="text-white text-xs md:text-base">
                 Escape the ordinary and dive into a world of exploration and
                 wonder. From majestic mountains to pristine beaches, let your
                 wanderlust lead the way. Whether you seek thrill or tranquility,
@@ -79,15 +79,15 @@ const Slider = () => {
         <SwiperSlide>
           <div className="relative bg-black rounded-2xl">
             <img
-              className="w-full h-[500px] md:h-[400px] lg:h-[500px] rounded-2xl opacity-60"
+              className="w-full h-[380px] md:h-[400px] lg:h-[500px] rounded-2xl opacity-60"
               src={slider3}
               alt=""
             />
             <div className="text-center space-y-6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-              <h1 className="text-3xl md:text-5xl font-bold text-white">
+              <h1 className="text-2xl md:text-5xl font-bold text-white">
                 Unlock the World's Wonders
               </h1>
-              <p className="text-white">
+              <p className="text-white text-xs md:text-base">
                 Open the door to a world of enchantment and discovery. Immerse
                 yourself in diverse cultures, stunning landscapes, and
                 unforgettable experiences. With every journey, create memories
@@ -100,15 +100,15 @@ const Slider = () => {
         <SwiperSlide>
           <div className="relative bg-black rounded-2xl">
             <img
-              className="w-full h-[500px] md:h-[400px] lg:h-[500px] rounded-2xl opacity-60"
+              className="w-full h-[380px] md:h-[400px] lg:h-[500px] rounded-2xl opacity-60"
               src={slider4}
               alt=""
             />
             <div className="text-center space-y-6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-              <h1 className="text-3xl md:text-5xl font-bold text-white">
+              <h1 className="text-2xl md:text-5xl font-bold text-white">
                 Journey Beyond Boundaries
               </h1>
-              <p className="text-white">
+              <p className="text-white text-xs md:text-base">
                 Break free from the ordinary and step into a realm of endless
                 possibilities. Explore distant lands, immerse yourself in rich
                 cultures, and create memories that transcend borders. Join us as
