@@ -4,6 +4,7 @@ import { toast } from "react-toastify";
 
 const UpdateSpot = () => {
   const spot = useLoaderData();
+  console.log(spot);
   const navigate = useNavigate();
   console.log(spot);
   const {

@@ -72,6 +72,30 @@ const Navbar = () => {
           My List
         </NavLink>
       </li>
+      <li className="md:hidden">
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "bg-white border border-green-400 text-green-400 py-2 px-4 rounded-lg"
+              : "hover:bg-white hover:text-green-500 py-2 px-4 border border-transparent rounded-lg"
+          }
+          to="/login"
+        >
+          Login
+        </NavLink>
+      </li>
+      <li className="md:hidden">
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "bg-white border border-green-400 text-green-400 py-2 px-4 rounded-lg"
+              : "hover:bg-white hover:text-green-500 py-2 px-4 border border-transparent rounded-lg"
+          }
+          to="/register"
+        >
+          Register
+        </NavLink>
+      </li>
     </>
   );
 
@@ -79,7 +103,11 @@ const Navbar = () => {
     <div className="navbar bg-green-100 px-5">
       <div className="navbar-start">
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+          <div
+            tabIndex={0}
+            role="button"
+            className="btn btn-ghost lg:hidden px-0"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -104,7 +132,7 @@ const Navbar = () => {
         </div>
         <Link to="/">
           <div className="flex justify-between items-center">
-            <img className="w-20 h-20" src={logo} alt="" />
+            <img className="w-14 h-14 md:w-20 md:h-20" src={logo} alt="" />
             <h1 className="text-2xl font-bold">
               Wander<span className="text-green-400">lust</span>
             </h1>
@@ -175,14 +203,14 @@ const Navbar = () => {
             </ul>
           </div>
         ) : (
-          <div className="space-x-3">
+          <div className="md:space-x-3">
             <Link to="/login">
-              <button className="btn bg-green-400 text-green-100 hover:bg-transparent hover:border hover:border-green-400 hover:text-green-400">
+              <button className="btn hidden md:inline bg-green-400 text-green-100 hover:bg-transparent hover:border hover:border-green-400 hover:text-green-400">
                 Login
               </button>
             </Link>
             <Link to="/register">
-              <button className="btn bg-green-400 text-green-100 hover:bg-transparent hover:border hover:border-green-400 hover:text-green-400">
+              <button className="btn hidden md:inline bg-green-400 text-green-100 hover:bg-transparent hover:border hover:border-green-400 hover:text-green-400">
                 Register
               </button>
             </Link>

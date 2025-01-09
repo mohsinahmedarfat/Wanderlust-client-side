@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 
 const MyList = () => {
   const { user } = useContext(AuthContext);
+  console.log(user.email);
   const [spots, setSpots] = useState([]);
   const [reload, setReload] = useState(false);
 
@@ -22,7 +23,7 @@ const MyList = () => {
       text: "You won't be able to revert this!",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: "#3085d6",
+      confirmButtonColor: "#22c55e",
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {

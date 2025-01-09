@@ -41,11 +41,11 @@ const AllSpot = () => {
           role="button"
           className="btn m-1 bg-green-400 text-green-100 hover:bg-transparent hover:border hover:border-green-400 hover:text-green-400"
         >
-          Dropdown <MdKeyboardArrowRight className="text-xl" />
+          Sort by <MdKeyboardArrowRight className="text-xl" />
         </div>
         <ul
           tabIndex={0}
-          className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+          className="dropdown-content z-[1] menu p-2 shadow bg-green-100 rounded-box w-52"
         >
           <li>
             <a onClick={handleAscending}>Ascending</a>

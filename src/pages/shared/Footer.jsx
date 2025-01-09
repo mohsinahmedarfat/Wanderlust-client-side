@@ -4,7 +4,7 @@ import logo from "../../assets/wander.png";
 const Footer = () => {
   return (
     <div className="bg-green-100">
-      <footer className="footer py-10 px-24  text-base-content">
+      <footer className="footer py-10 text-base-content">
         <aside className="flex flex-col justify-center items-center mx-auto md:grid">
           <Link to="/">
             <div>
@@ -18,21 +18,23 @@ const Footer = () => {
             Explore Beyond, <br /> Wanderlust Guides Your Journey!
           </p>
         </aside>
-        <div className="flex gap-20 md:gap-6 lg:gap-20">
-          <nav className="flex flex-col space-y-3">
-            <h6 className="footer-title">Services</h6>
-            <a className="link link-hover">Branding</a>
-            <a className="link link-hover">Design</a>
-            <a className="link link-hover">Marketing</a>
-            <a className="link link-hover">Advertisement</a>
-          </nav>
-          <nav className="flex flex-col space-y-3">
-            <h6 className="footer-title">Company</h6>
-            <a className="link link-hover">About us</a>
-            <a className="link link-hover">Contact</a>
-            <a className="link link-hover">Jobs</a>
-            <a className="link link-hover">Press kit</a>
-          </nav>
+        <div className="flex justify-center items-center mx-auto">
+          <div className="flex gap-20 md:gap-6 lg:gap-20">
+            <nav className="flex flex-col space-y-3">
+              <h6 className="footer-title">Services</h6>
+              <a className="link link-hover">Branding</a>
+              <a className="link link-hover">Design</a>
+              <a className="link link-hover">Marketing</a>
+              <a className="link link-hover">Advertisement</a>
+            </nav>
+            <nav className="flex flex-col space-y-3">
+              <h6 className="footer-title">Company</h6>
+              <a className="link link-hover">About us</a>
+              <a className="link link-hover">Contact</a>
+              <a className="link link-hover">Jobs</a>
+              <a className="link link-hover">Press kit</a>
+            </nav>
+          </div>
         </div>
         <nav className="flex flex-col justify-center items-center mx-auto">
           <h6 className="footer-title">Social</h6>
@@ -74,7 +76,7 @@ const Footer = () => {
         </nav>
       </footer>
       <hr />
-      <p className="text-center py-5">
+      <p className="text-center py-5 px-1">
         Copyright © 2024 - All right reserved by Wanderlust
       </p>
     </div>
